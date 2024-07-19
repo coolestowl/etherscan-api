@@ -172,7 +172,7 @@ func (c *Client) call(module, action string, param map[string]interface{}, outco
 		err = wrapErr(err, "json unmarshal envelope")
 		return
 	}
-	if envelope.Status != 1 {
+	if envelope.Status != "1" {
 		err = fmt.Errorf("etherscan server: %s", envelope.Message)
 		return
 	}

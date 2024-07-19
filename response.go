@@ -17,7 +17,7 @@ import (
 // Envelope is the carrier of nearly every response
 type Envelope struct {
 	// 1 for good, 0 for error
-	Status int `json:"status,string"`
+	Status json.Number `json:"status"`
 	// OK for good, other words when Status equals 0
 	Message string `json:"message"`
 	// where response lies
