@@ -166,6 +166,8 @@ func (c *Client) call(module, action string, param map[string]interface{}, outco
 		return
 	}
 
+	fixedContent := bytes.ReplaceAll(content.Bytes(), []byte(`"transactionIndex":""`), []byte(`"transactionIndex":"0"`))
+
 	var envelope Envelope
 	err = json.Unmarshal(content.Bytes(), &envelope)
 	if err != nil {
