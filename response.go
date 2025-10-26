@@ -200,6 +200,7 @@ type Log struct {
 	Topics          []string `json:"topics"`
 	Data            string   `json:"data"`
 	BlockNumber     string   `json:"blockNumber"`
+	Timestamp       string   `json:"timeStamp"`
 	TransactionHash string   `json:"transactionHash"`
 	BlockHash       string   `json:"blockHash"`
 	LogIndex        string   `json:"logIndex"`
