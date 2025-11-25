@@ -166,6 +166,17 @@ type ContractSource struct {
 	SwarmSource          string `json:"SwarmSource"`
 }
 
+// ContractCreation holds info from query for contract creation
+type ContractCreation struct {
+	ContractAddress  string `json:"contractAddress"`
+	ContractCreator  string `json:"contractCreator"`
+	TxHash           string `json:"txHash"`
+	BlockNumber      int    `json:"blockNumber,string"`
+	Timestamp        Time   `json:"timestamp"`
+	ContractFactory  string `json:"contractFactory"`
+	CreationBytecode string `json:"creationBytecode"`
+}
+
 // ExecutionStatus holds info from query for transaction execution status
 type ExecutionStatus struct {
 	// 0 = pass, 1 = error
